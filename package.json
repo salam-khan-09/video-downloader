@@ -1,0 +1,9 @@
+{
+  "name": "video-downloader",
+  "version": "1.0.0",
+  "description": "Video downloader website + backend (uses the Social Media Video Downloader API on RapidAPI)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
