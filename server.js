@@ -216,7 +216,7 @@ function normItem(it, kind, platform) {
     else if (str(m.audioQuality) || str(m.audioSampleRate) || numOf(m.audioChannels)) hasAudio = true;
     else if (/codecs/.test(codecs) && /avc1|vp0?9|av01|hev1|hvc1/.test(codecs)) hasAudio = false;
   }
-  if (kind === 'rvideos' || kind === 'raudios') hasAudio = true;
+  if (kind === 'rvideos' || kind === 'raudios') hasVideo = false;
   if (kind === 'videos' && hasAudio === null && platform === 'youtube' && q > 360) hasAudio = false;
   const size = numOf(m.size || m.contentLength || m.content_length || m.filesize || m.bytes || m.approxSize);
   const bitrate = numOf(m.bitrate || m.averageBitrate || m.audioBitrate || m.bitRate);
